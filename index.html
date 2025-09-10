@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Catcher - Pixelated Web</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Press Start 2P', monospace;
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16"><path fill="rgb(255,255,255)" d="M1 1l5 5h-4l-1-1v-4zM15 15l-5-5h4l1 1v4zM1 15l5-5h-4l-1 1v4zM15 1l-5 5h4l1-1v-4z"/></svg>'), auto;
+        }
+        .pixel-border {
+            border: 2px solid #000;
+            box-shadow: 4px 4px 0 #000;
+            transition: transform 0.1s, box-shadow 0.1s;
+        }
+        .pixel-border:hover {
+            transform: translate(2px, 2px);
+            box-shadow: 2px 2px 0 #000;
+        }
+        .pixel-button {
+            border: 3px solid #000;
+            box-shadow: inset -3px -3px 0 #000, 3px 3px 0 #000;
+            text-shadow: 2px 2px #000;
+        }
+    </style>
+</head>
+<body class="bg-blue-950 text-lime-400 p-4">
+
+    <header class="text-center mb-8">
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-2 text-white pixel-border inline-block p-2 bg-purple-700">SimpleCatcherOFFweb.com</h1>
+        <p class="text-lg text-lime-300">Absolute Immortal Presents</p>
+    </header>
+
+    <main class="max-w-6xl mx-auto space-y-12">
+
+        <section id="hero" class="bg-white p-6 pixel-border text-gray-900 flex flex-col md:flex-row items-center justify-center gap-8">
+            <div class="md:w-1/2">
+                <img src="logo.png" alt="Game Logo" class="pixel-border">
+            </div>
+            <div class="md:w-1/2 text-center md:text-left">
+                <h2 class="text-4xl font-extrabold mb-4">SIMPLE CATCHER</h2>
+                <p class="text-xl leading-relaxed text-gray-800">
+                    A reaction-based game built from the ground up. Experience the unique fusion of the physical world (Arduino) and the digital world (PictoBlox)!
+                </p>
+                <a href="#how-to-play" class="mt-6 inline-block bg-purple-500 text-white font-bold py-3 px-6 text-xl pixel-button hover:bg-purple-700">
+                    START
+                </a>
+            </div>
+        </section>
+
+        <section id="how-to-play" class="bg-white p-6 pixel-border text-gray-900">
+            <h2 class="text-3xl font-bold text-center mb-6">HOW TO PLAY</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-lg">
+                <div class="bg-gray-200 p-4 pixel-border">
+                    <p class="font-bold text-lg mb-2 text-purple-700">Objective:</p>
+                    <p class="text-gray-800 leading-relaxed">Reach a score of **100** before the time runs out!</p>
+                </div>
+                <div class="bg-gray-200 p-4 pixel-border">
+                    <p class="font-bold text-lg mb-2 text-green-700">Gain Points:</p>
+                    <p class="text-gray-800 leading-relaxed">When the **GREEN LED** lights up, press the right button quickly. Your score will increase by **+5**.</p>
+                </div>
+                <div class="bg-gray-200 p-4 pixel-border">
+                    <p class="font-bold text-lg mb-2 text-red-700">Avoid Penalties:</p>
+                    <p class="text-gray-800 leading-relaxed">If the **RED LED** lights up and you press the button, you will lose **-10** points.</p>
+                </div>
+                <div class="bg-gray-200 p-4 pixel-border">
+                    <p class="font-bold text-lg mb-2 text-blue-700">Game Over:</p>
+                    <p class="text-gray-800 leading-relaxed">The game ends when you reach the target score or when your score drops to zero.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-white p-6 pixel-border text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">Try Game For Free Now!</h2>
+            <a href="https://absoluteimmortal.com/simple-catcher-download" target="_blank" class="inline-block bg-purple-500 text-white font-bold py-3 px-8 text-xl pixel-button hover:bg-purple-700">
+                Download
+            </a>
+        </section>
+
+        <section id="screenshots">
+            <h2 class="text-3xl font-bold text-center mb-6">GAME SCREENSHOTS</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <img src="menu.png" alt="Screenshot of the menu screen" class="pixel-border w-full h-auto">
+                <img src="gameplay.png" alt="Screenshot of the game in action" class="pixel-border w-full h-auto">
+                <img src="windscreen.png" alt="Screenshot of the victory screen" class="pixel-border w-full h-auto">
+            </div>
+        </section>
+
+        <section id="soundtrack" class="bg-white p-6 pixel-border text-gray-900 text-center">
+            <h2 class="text-3xl font-bold mb-6">GAME SOUNDTRACK</h2>
+            <div class="space-y-4">
+                <div class="p-4 bg-gray-200 pixel-border">
+                    <p class="text-lg font-bold text-purple-700 mb-1">"Don't Stop Me Now"</p>
+                    <p class="text-gray-800 text-sm">by Queen</p>
+                    <p class="text-xs text-gray-500 mt-2">The high-energy theme for our fast-paced gameplay!</p>
+                </div>
+                <div class="p-4 bg-gray-200 pixel-border">
+                    <p class="text-lg font-bold text-purple-700 mb-1">"We Are the Champions"</p>
+                    <p class="text-gray-800 text-sm">by Queen</p>
+                    <p class="text-xs text-gray-500 mt-2">The perfect song for celebrating your victory!</p>
+                </div>
+                <div class="p-4 bg-gray-200 pixel-border">
+                    <p class="text-lg font-bold text-purple-700 mb-1">"Don't Look Back in Anger"</p>
+                    <p class="text-gray-800 text-sm">by Oasis</p>
+                    <p class="text-xs text-gray-500 mt-2">A calming track to play on the main menu screen.</p>
+                </div>
+                <div class="p-4 bg-gray-200 pixel-border">
+                    <p class="text-lg font-bold text-purple-700 mb-1">"Let It Happen"</p>
+                    <p class="text-gray-800 text-sm">by Tame Impala</p>
+                    <p class="text-xs text-gray-500 mt-2">A philosophical tune for when you lose the game.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="creators" class="bg-white p-6 pixel-border text-gray-900 text-center">
+            <h2 class="text-3xl font-bold mb-6">WHO MADE THIS GAME?</h2>
+            <div class="flex flex-col md:flex-row justify-center items-center gap-8">
+                <div class="p-4 bg-gray-200 pixel-border w-full md:w-1/2">
+                    <h3 class="text-2xl font-bold mb-2 text-purple-700">HARREL</h3>
+                    <p class="text-gray-800 mb-2 leading-relaxed">
+                        <span class="font-bold">Hardware Engineer</span> <br>
+                        "The one who makes this game feel real. From the Arduino to every button, he puts it all together."
+                    </p>
+                </div>
+                <div class="p-4 bg-gray-200 pixel-border w-full md:w-1/2">
+                    <h3 class="text-2xl font-bold mb-2 text-green-700">HENDRY</h3>
+                    <p class="text-gray-800 mb-2 leading-relaxed">
+                        <span class="font-bold">Software Developer</span> <br>
+                        "The wizard behind the scenes. He turns ideas into code and gives instructions to the hardware."
+                    </p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center mt-12 py-6">
+        <p class="text-sm pixel-border inline-block p-2">© 2025 ABSOLUTE IMMORTAL. ALL RIGHTS RESERVED.</p>
+    </footer>
+
+</body>
+</html>
